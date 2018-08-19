@@ -4,8 +4,8 @@ info:
     version: "0.1.0"
 
 servers:
-    - url: https://someurl.net
-      description: Sandbox
+    - url: https://ehc9iodcy8.execute-api.us-east-1.amazonaws.com/dev
+      description: Dev
 
 paths:
     /characters:
