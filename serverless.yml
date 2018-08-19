@@ -1,0 +1,47 @@
+service: ${file(package.json):name}
+version: ${file(package.json):version}
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+package:
+  exclude:
+    - .gitignore
+
+functions:
+
+  create:
+    handler: handlers/create.handler
+    events:
+      - http:
+          path: /characters
+          method: post
+  
+  list:
+    handler: handlers/list.handler
+    events:
+      - http:
+          path: /characters
+          method: get
+
+  get:
+    handler: handlers/get.handler
+    events:
+      - http:
+          path: /characters/{id}
+          method: get
+
+  update:
+    handler: handlers/update.handler
+    events:
+      - http:
+          path: /characters/{id}
+          method: patch
+
+  delete:
+    handler: handlers/delete.handler
+    events:
+      - http:
+          path: /characters/{id}
+          method: delete
