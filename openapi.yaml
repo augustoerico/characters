@@ -14,7 +14,7 @@ paths:
             operationId: CharacterList
             summary: List
             responses:
-                200:
+                '200':
                     description: Success
                     content:
                         application/json:
@@ -25,7 +25,7 @@ paths:
             operationId: CharacterCreate
             summary: Create
             responses:
-                201:
+                '201':
                     description: Success
                     content:
                         application/json:
@@ -43,13 +43,13 @@ paths:
             operationId: CharacterGet
             summary: Get
             responses:
-                200:
+                '200':
                     description: Success
                     content:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/CharacterGet"
-                404:
+                '404':
                     description: Not found
                     content:
                         application/json:
@@ -59,13 +59,13 @@ paths:
             operationId: CharacterUpdate
             summary: Update
             responses:
-                200:
+                '200':
                     description: Success
                     content:
                         application/json:
                             schema:
                                 $ref: "#/components/schemas/CharacterGet"
-                404:
+                '404':
                     description: Not found
                     content:
                         application/json:
@@ -75,9 +75,9 @@ paths:
             operationId: CharacterDelete
             summary: Delete
             responses:
-                204:
+                '204':
                     description: Success
-                404:
+                '404':
                     description: Not found
                     content:
                         application/json:
